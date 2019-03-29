@@ -1,0 +1,51 @@
+
+<h1>Formulario de Cadastro Simples</h1>
+
+<form (ng-submit)="onSubmit()">
+ <div>
+  <label for="nome">Nome:</label>
+  <input type="text" placeholder="digite seu nome ..." style="width:20%" name="nome" id="nome" ng-model="cliente.nome">
+  </div>
+  <br>
+  
+  <div class="form-group">
+    <label for="tipo">Tipo:</label>
+    <select class= "w3-select" style="width:20%" name="tipo" id="tipo" ng-model="tipo">
+     <option value="1">Pessoa com Deficiência</option>
+     <option value="2">Pessoa sem Deficiência</option> 
+    </select> 
+  </div>
+    <br>
+
+     <div class="form-group" >
+      <label>Gênero</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" id="masculino" [value]="1" ng-model="genero">
+        <label class="container" for="masculino">Masculino</label>
+      </div>
+     
+      <div class="form-check">
+        <input class="form-check-input" type="radio" id="feminino" [value]="2" ng-model="genero">
+        <label class="form-check-label" for="feminino">Feminino</label>
+      </div>
+     </div>
+     <br>
+     <div class="form-group">
+        <label for="DataNascimento">Data do Nascimento :</label>
+        <input type="date" class="form-control" name="datanascimento" id="datanascimento" ng-model="datanascimento">
+     </div>
+     <br>
+     <div class="form-group">
+        <label for="observacao">Observação:</label>
+        <br>
+        <textarea class="form-control" placeholder="" rows="3" name="observacao" id="observacao" ng-model="observacao"></textarea>
+     </div>
+     <br> 
+     <div class="form-check">
+        <input type="checkbox" class="form-check-input" name="inativo" id="inativo" ng-model="inativo">
+        <label class="form-check-label" for="inativo">Inativo</label>
+     </div>
+     <br> 
+      <input type="submit" class="button" value="salvar">
+      <a href="#" class="" >Cancelar</a>
+</form>
